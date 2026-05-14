@@ -1,6 +1,6 @@
 from classes.Conta import Conta
 from classes.Cliente import Cliente
-
+from classes.ContaEspecial import ContaEspecial
 
 #TESTANDO O CODIGO
 cliente1 = Cliente('123', 'joao', 'Rua y')
@@ -10,11 +10,12 @@ cliente4 = Cliente('555', 'Débora', 'Rua J')
 
 conta1 = Conta([cliente1, cliente2], 111, 0)
 conta2 = Conta([cliente3, cliente4], 222, 1621)
+conta3 = ContaEspecial(cliente3, 3, 2000, 1000)
 
-conta1.depositar(1000)
-conta1.tranferencia_valor(conta2, 100)
-conta1.extrato.gera_extrato(conta1.numero)
-conta2.extrato.gera_extrato(conta2.numero)
+
+
+conta3.sacar(2800)
+conta3.gerar_saldo()
 
 
 
